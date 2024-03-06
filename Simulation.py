@@ -3,6 +3,8 @@ import math
 # define and apply the Jaynes-Cummings inverse function formula with zero detuning
 
 def inverse_function(N, T):
+	'''Generate two list of data, time and values of W(t), to represent the inverse function.'''
+	
 	# time data for the x-axis
 	time_set = []
 	# function data for the y-axis
