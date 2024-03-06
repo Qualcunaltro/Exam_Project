@@ -1,11 +1,16 @@
 import Graphing as G
 import Simulation as S
 
-def simulate(N, T):
-	'''Apply the J-C inverse function formula and draw its graph'''
+def simulate_static(N, T):
+	'''Apply the J-C inverse function formula and draw its static graph'''
 	time, W = S.inverse_function(N, T)
 	G.draw_graph(time, W)
 
+def simulate_animated(N, T):
+	'''Apply the J-C inverse function formula and draw its animated graph'''
+	time, W = S.inverse_function(N, T)
+	G.draw_animated_graph(time, W)
+	
 def start_program():
 	'''Welcome the user and ask for inputs N and T'''
 
@@ -29,7 +34,13 @@ def start_program():
 				break
 			else:
 				T = float(T_input)
-			simulate(N, T)
-		
-
+			
+			anim_check = input("Do you want an animated graph?")
+			if anim_check == 'yes' or anim_check == 'Yes' or anim_check == 'y' or anim_check == 'Y':
+				simulate_animated(N, T)
+			elif anim_check == 'q':
+				break
+			else:
+				simulate_static(N, T)
+	
 start_program()
