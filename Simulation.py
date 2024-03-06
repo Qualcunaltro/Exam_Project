@@ -8,7 +8,8 @@ def inverse_function(N, T):
 	# function data for the y-axis
 	W_set = []
 	t_element = 0
-	while t_element < 40:
+	t_max = T + 0.1
+	while t_element < t_max:
 		time_set.append(t_element)
 		t_element += 0.1
 	# summation approximated to the first 20 terms
