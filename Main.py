@@ -17,8 +17,9 @@ def start_program():
 	starting_prompt = "\nWelcome to the Jaynes-Cunning model simulation."
 	starting_prompt += "\nTo exit at any time, type 'q' and press Enter."
 	starting_prompt += "\nTo generate a inverse function graph for your model," 
-	starting_prompt += "\ninput the average number of photons in the system and the lenght of time to be considered."
-	
+	starting_prompt += "\ninput the average number of photons in the system"
+	starting_prompt += "\nand the lenght of time to be considered."
+
 	Looping = True
 	while Looping == True:
 		print(starting_prompt)

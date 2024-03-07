@@ -1,6 +1,8 @@
 import math
 
-# define and apply the Jaynes-Cummings inverse function formula with zero detuning
+'''Define and apply the Jaynes-Cummings inverse function formula 
+with zero detuning to generate a data set, starting from
+average number of photons and time window.'''
 
 def inverse_function(N, T):
 	'''Generate two list of data, time and values of W(t), to represent the inverse function.'''
@@ -9,11 +11,13 @@ def inverse_function(N, T):
 	time_set = []
 	# function data for the y-axis
 	W_set = []
+
 	t_element = 0
 	t_max = T + 0.1
 	while t_element < t_max:
 		time_set.append(t_element)
 		t_element += 0.1
+
 	# summation approximated to the first 20 terms
 	n_tot = range(1, 21, 1)
 	for t in time_set:
