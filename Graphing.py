@@ -25,7 +25,7 @@ def draw_animated_graph(x,y):
 	def speed_check(x):
 		'''Determine the framerate to limit animation time'''
 		T_max = len(x)
-		time_constant = 8000
+		time_constant = 8000 #configurable?
 		frame_interval = time_constant/T_max
 		return frame_interval
 

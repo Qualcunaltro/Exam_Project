@@ -13,13 +13,15 @@ def inverse_function(N, T):
 	W_set = []
 
 	t_element = 0
-	t_max = T + 0.1
+	t_resolution = 0.1 #configurable?
+	t_max = T + t_resolution
 	while t_element < t_max:
 		time_set.append(t_element)
-		t_element += 0.1
+		t_element += t_resolution
 
 	# summation approximated to the first 20 terms
-	n_tot = range(1, 21, 1)
+	approximation = 20 #configurable?
+	n_tot = range(1, approximation+1, 1)
 	for t in time_set:
 		S = 0
 		for n in n_tot:
