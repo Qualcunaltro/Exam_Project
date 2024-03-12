@@ -10,5 +10,5 @@ def speed_check(x, time_constant):
 		return frame_interval
 
 def test_speed_check():
-	'''Check if the function work as we expect.'''
+	'''Check if the function work as we expect'''
 	assert speed_check(test_range, test_time_constant) == 800.0

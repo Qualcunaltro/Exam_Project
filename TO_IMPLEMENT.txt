@@ -1,10 +1,8 @@
 Unit testing
-	- speed_check() in Graphing: check limiting animated graph execution time
 	- test input interface and edge cases (float vs int, string vs numbers, very small and very big values)
 	
 Features
 	- saving datasets
 	- calculating and graphing Von Neumann entropy
 	- write physics background info (adapted from Quantum States notes)
-	- create a Configuratio module with constant and parameters to allow users to tinker with them (optional)
 	- saving animated graphs (optional)
