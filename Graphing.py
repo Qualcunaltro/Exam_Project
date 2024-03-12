@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import csv
 import itertools
+from decimal import getcontext, Decimal
 from datetime import datetime
 
 '''Create the graphic representation of the data, given a dataset.'''
@@ -44,11 +45,13 @@ def write_csv(time, function):
 	'''Generate .cvs file containing the input datasets time & function.'''
 	current_time = datetime.now().strftime("%H-%M-%S")
 	file_name = 'Jaynes-Cummings inverse function ' + current_time + '.csv'
+	getcontext().prec = 4
 	with open(file_name, 'w', newline='') as file:
 		writer = csv.writer(file)
 		writer.writerow(['Time (a.u.)', ' Inverse Function W(t)'])
 		for (t, f) in zip(time, function):
-			writer.writerow([t, f])
+			tdec, fdec = Decimal(t), Decimal(f)
+			writer.writerow([round(tdec, 1), round(fdec, 3)])
 
 
 	

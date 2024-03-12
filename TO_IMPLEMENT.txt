@@ -2,7 +2,6 @@ Unit testing
 	- test input interface and edge cases (float vs int, string vs numbers, very small and very big values)
 	
 Features
-	- saving datasets
 	- calculating and graphing Von Neumann entropy
 	- write physics background info (adapted from Quantum States notes)
-	- saving animated graphs (optional)
+	
