@@ -4,7 +4,7 @@ import math
 with zero detuning to generate a data set, starting from
 average number of photons and time window.'''
 
-def inverse_function(N, T):
+def inverse_function(N, T, approximation):
 	'''Generate two list of data, time and values of W(t), to represent the inverse function.'''
 	
 	# time data for the x-axis
@@ -19,8 +19,6 @@ def inverse_function(N, T):
 		time_set.append(t_element)
 		t_element += t_resolution
 
-	# summation approximated to the first 20 terms
-	approximation = 20 #configurable?
 	n_tot = range(1, approximation+1, 1)
 	for t in time_set:
 		S = 0

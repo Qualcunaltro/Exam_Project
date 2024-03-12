@@ -11,7 +11,7 @@ def draw_graph(x, y):
 	plt.axhline(y = 0, color = 'black', linestyle = 'dashed')
 	plt.show()
 
-def draw_animated_graph(x,y):
+def draw_animated_graph(x,y, time_constant):
 	'''Draw the animated graph'''
 	fig, ax = plt.subplots()
 	plt.axhline(y = 0, color = 'black', linestyle = 'dashed')
@@ -22,15 +22,14 @@ def draw_animated_graph(x,y):
 		line.set_data(x[:num], y[:num])
 		return line,
 
-	def speed_check(x):
+	def speed_check(x, time_constant):
 		'''Determine the framerate to limit animation time'''
-		T_max = len(x)
-		time_constant = 8000 #configurable?
+		T_max = len(x) - 1
 		frame_interval = time_constant/T_max
 		return frame_interval
 
 	ani = animation.FuncAnimation(
-		fig, update, len(x), interval=speed_check(x), 
+		fig, update, len(x), interval=speed_check(x, time_constant), 
 		fargs=[x, y, line], blit=True)
 	plt.show()
 	
