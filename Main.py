@@ -8,17 +8,17 @@ def simulate_static(N, T, approximation, saving):
 	'''Apply the J-C inverse function formula and draw its static graph.'''
 	time, W = S.inverse_function(N, T, approximation)
 	G.draw_graph(time, W, saving)
-
-def simulate_animated(N, T, approximation, time_constant):
+	
+def simulate_animated(N, T, approximation, time_constant, saving):
 	'''Apply the J-C inverse function formula and draw its animated graph.'''
 	time, W = S.inverse_function(N, T, approximation)
-	G.draw_animated_graph(time, W, time_constant)
-	
+	G.draw_animated_graph(time, W, time_constant, saving)
+		
 def start_program(N, T, approximation, time_constant, anim_check, saving):
 	'''The program main executable.'''
 	
 	if anim_check == True:
-		simulate_animated(N, T, approximation, time_constant)
+		simulate_animated(N, T, approximation, time_constant, saving)
 	else:
 		simulate_static(N, T, approximation, saving)
 		

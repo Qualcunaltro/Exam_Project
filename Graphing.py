@@ -13,13 +13,13 @@ def draw_graph(x, y, saving):
 	plt.xlabel('Time (a.u.)')
 	plt.ylabel('Inverse function W(t)')
 	plt.axhline(y = 0, color = 'black', linestyle = 'dashed')
-	plt.show()
 	if saving == True:
+		plt.show()
 		write_csv(x, y)
 	else:
 		plt.show()
 
-def draw_animated_graph(x,y, time_constant):
+def draw_animated_graph(x,y, time_constant, saving):
 	'''Draw the animated graph.'''
 	fig, ax = plt.subplots()
 	plt.axhline(y = 0, color = 'black', linestyle = 'dashed')
@@ -39,7 +39,11 @@ def draw_animated_graph(x,y, time_constant):
 	ani = animation.FuncAnimation(
 		fig, update, len(x), interval=speed_check(x, time_constant), 
 		fargs=[x, y, line], blit=True)
-	plt.show()
+	if saving == True:
+		plt.show()
+		write_csv(x, y)
+	else:
+		plt.show()
 
 def write_csv(time, function):
 	'''Generate .cvs file containing the input datasets time & function.'''

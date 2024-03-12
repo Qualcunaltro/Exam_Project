@@ -1,0 +1,31 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h2 id="introduction">Introduction</h2>
+<p>A program to generate Inversion functions for the Jaynes-Cummings model, in particular to illustrate the phenomenon of collapse and revival.</p>
+<h2 id="installation">Installation</h2>
+<p>This program require installation of the Python module <em>matplotlib</em>.
+It furthemore makes use of the following default modules:
+⋅ <em>csv</em>
+⋅ <em>itertools</em>
+⋅ <em>decimal</em>
+⋅ <em>datetime</em>
+⋅ <em>math</em></p>
+<p>Testing was done through <em>pytest</em>.</p>
+<p>To install the program, simply download and have all the four modules (<strong>Simulation</strong>, <strong>Graphing</strong>, <strong>Config</strong> &amp; <strong>Main</strong>) in the same folder.</p>
+<p><a href="https://github.com/Qualcunaltro/Exam_Project">Link to the GitHub repository.</a></p>
+<h2 id="how-to-use">How to Use</h2>
+<p>Before starting the program, set up the parameters in the <strong>Config</strong> module.
+The parameters are:</p>
+<p>⋅ Average number of photons in the system (<strong>N_e</strong>): this must be an integer, positive number. To see the collpse and revival effect, it should be 4 or more.</p>
+<p>⋅ Time interval for the simulation (<strong>T_x</strong>): this must be either an integer or a decimal number up to 0.1, and in every case positive.
+⋅ The approximation level for summations (<strong>approx</strong>), i.e. how many terms to consider in summation that would be, in theory, infinite: this is a positive integer value.</p>
+<p>⋅ The animation time constant (<strong>time_const</strong>): the animated graph framerate is not constant, but dinamically decreases with increasing number of points, so that its duration doesn&#39;t become too long for longer time windows. 
+If the animated graphs are still taking too long, decrease this integer, and viceversa.</p>
+<p>⋅ Animated graph check (<strong>anime</strong>): a boolean value to determine if the produced graph is animated (True) or static (False).</p>
+<p>⋅ Saving data check (<strong>save</strong>): a boolean value to determine if the data set produced is to be saved in a .csv file (True) or not (False)</p>
+<p>Once the parameters have been set, to start the program execute the module <strong>Main</strong>.</p>
+<p>To save static graph as images, use the interface in the image window.
+Attempting to do the same to an animated graph will only save the current frame.
+If the data had been requested as saved, a .csv file with the current time will be found in the folder where the modules are installed.</p>
+</body></html>
