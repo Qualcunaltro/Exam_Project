@@ -28,6 +28,7 @@ The parameters are:
 ⋅ Average number of photons in the system (**N_e**): this must be an integer, positive number. To see the collpse and revival effect, it should be 4 or more.
 
 ⋅ Time interval for the simulation (**T_x**): this must be either an integer or a decimal number up to 0.1, and in every case positive.
+
 ⋅ The approximation level for summations (**approx**), i.e. how many terms to consider in summation that would be, in theory, infinite: this is a positive integer value.
 
 ⋅ The animation time constant (**time_const**): the animated graph framerate is not constant, but dinamically decreases with increasing number of points, so that its duration doesn't become too long for longer time windows. 
