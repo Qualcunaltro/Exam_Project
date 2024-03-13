@@ -8,7 +8,7 @@ def time_set_generation(T):
 	'''
 	Generate a list with a range (0, T) and 0.1 step.
 	Used by other functions to generate the x-axis time data.
-	Input: a positive real number (ideally, but necessarily rounded to the nearest 0.1).
+	Input: a positive real number (ideally, but necessarily, rounded to the nearest 0.1).
 	Output: a list of incremental floating point values starting from 0 up to the input value. 
 	'''
 	time_set = []
