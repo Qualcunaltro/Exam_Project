@@ -1,6 +1,6 @@
 '''Set the parameters for the simulation.'''
 
-# Average number of photons in the system (must be a natural number).
+# Average number of photons in the system (must be a positive real number).
 N_e = 10
 # Time interval to be considered in the data set.
 T_x = 50

@@ -8,7 +8,7 @@ def time_set_generation(T):
 	'''
 	Generate a list with a range (0, T) and 0.1 step.
 	Used by other functions to generate the x-axis time data.
-	Input: a positive decimal number rounded to 0.1.
+	Input: a positive real number (ideally, but necessarily rounded to the nearest 0.1).
 	Output: a list of incremental floating point values starting from 0 up to the input value. 
 	'''
 	time_set = []
@@ -23,7 +23,8 @@ def inverse_function(N, T, approximation):
 	'''
 	Generate two list of data, time and values of W(t), to represent the inverse function.
 	See the documentation for the inverse function formula.
-	Input: integer N and approximation, decimal T.
+	Input: real number N, T and approximation, representing average number of photons, time window 
+	and max number of terms to approximate infinite summations.
 	Output: two list, one for the time (0, T) and another for the values of the function W(t)
 	'''
 	W_set = []

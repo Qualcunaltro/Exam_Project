@@ -1,7 +1,6 @@
 import pytest
 import math
 
-test_N, test_T, test_approx = 4, 1, 20
 exp_time = [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1]
 
 def time_set_generation(T):
@@ -36,3 +35,6 @@ def test_time_set_generation():
 	for t in test_time:
 		assert math.isclose(t, exp_time[i], abs_tol=0.00001) == True
 		i += 1
+
+
+

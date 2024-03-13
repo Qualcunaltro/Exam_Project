@@ -7,7 +7,7 @@ from Config import setup
 def simulate_static(N, T, approximation, saving):
 	'''
 	Apply the J-C inverse function formula and draw its static graph by calling the respective functions from the modules.
-	Input: positive integers N & approximation, positive float T (rounded to 0.1) and boolean saving
+	Input: positive real values N & approximation, T and boolean saving
 	Output: graph and, optionally, data in .csv file.
 	'''
 	time, W = S.inverse_function(N, T, approximation)
@@ -16,7 +16,7 @@ def simulate_static(N, T, approximation, saving):
 def simulate_animated(N, T, approximation, time_constant, saving):
 	'''
 	Apply the J-C inverse function formula and draw its animated graph by calling the respective functions from the modules.
-	Input: positive integers N, approximation and time_constant, positive float T (rounded to 0.1) and boolean saving
+	Input: positive real numbers N, approximation T and time_constant, plus the boolean saving.
 	Output: graph and, optionally, data in .csv file.
 	'''
 	time, W = S.inverse_function(N, T, approximation)
@@ -25,7 +25,7 @@ def simulate_animated(N, T, approximation, time_constant, saving):
 def start_program(N, T, approximation, time_constant, anim_check, saving):
 	'''
 	The program main executable.
-	Check if the graph to generate must be animated or static, then call the proper function.
+	Check if the graph to generate must be animated or static through the variable saving, then call the proper function.
 	'''
 	
 	if anim_check == True:

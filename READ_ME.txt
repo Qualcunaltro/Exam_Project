@@ -25,9 +25,9 @@ To install the program, simply download and have all the four modules (**Simulat
 Before starting the program, set up the parameters in the **Config** module.
 The parameters are:
 
-⋅ Average number of photons in the system (**N_e**): this must be an integer, positive number. To see the collpse and revival effect, it should be 4 or more.
+⋅ Average number of photons in the system (**N_e**): this must be an positive real number. To see the collpse and revival effect, it should be 4 or more.
 
-⋅ Time interval for the simulation (**T_x**): this must be either an integer or a decimal number up to 0.1, and in every case positive.
+⋅ Time interval for the simulation (**T_x**): this must be positive real number. To see the collpse and revival effect, it should be a few tens or more.
 
 ⋅ The approximation level for summations (**approx**), i.e. how many terms to consider in summation that would be, in theory, infinite: this is a positive integer value.
 

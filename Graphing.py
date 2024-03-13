@@ -12,7 +12,7 @@ def draw_graph(x, y, saving):
 	Draw the static graph from two data set (time and function) and saves the data in a .csv file.
 	Input: time data set, the function data set and the boolean check for saving the data.
 	Output: a graph and, optionally, a .csv file.
-	Note: to save the graph, use the matplotlib interface during the graph visualization.
+	Note: to save the graph as an image, use the matplotlib interface during the graph visualization.
 	'''
 	plt.plot(x, y)
 	plt.xlabel('Time (a.u.)')
@@ -28,7 +28,7 @@ def draw_animated_graph(x,y, time_constant, saving):
 	'''Draw the animated graph from two data set (time and function) and saves the data in a .csv file.
 	Input: time data set, the function data set and the boolean check for saving the data.
 	Output: a graph and, optionally, a .csv file.
-	Note: to save the graph, use the matplotlib interface during the graph visualization.'''
+	Note: to save the graph as an image, use the matplotlib interface during the graph visualization.'''
 	fig, ax = plt.subplots()
 	plt.axhline(y = 0, color = 'black', linestyle = 'dashed')
 	line, = ax.plot(x, y)
